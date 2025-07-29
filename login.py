@@ -2,20 +2,22 @@ import streamlit as st
 import authlib
 #from app import chat
 
-IMAGE_ADDRESS = "https://europe.ippf.org/sites/europe/files/styles/header_background_xs/public/2022-12/illustration-14-website-no-logos-no-text.jpg?itok=y-vJsgkS"
+IMAGE_ADDRESS = "https://www.shutterstock.com/image-photo/demo-text-message-magnifying-glass-space-2491336635"
 
-# title
+
+if 'lang' not in st.session_state:
+    st.session_state.lang = "en"
+
+# Title and Image
 st.title("Demo_Google_Log")
-
 st.image(IMAGE_ADDRESS)
-#if not st.experimental_user.is_logged_in:
 
-if not st.user.is_logged_in:
+# Login pipeline
+if not st.experimental_user.is_logged_in:
     if st.sidebar.button("Log in with Google", type="primary", icon=":material/login:"):
         st.login()
-
 else:
-    #st.html(f"Hello, <span style='color: orange; font-weight: bold;'>{st.experimental_user.name}</span>!")
     if st.sidebar.button("Log out", type="secondary", icon=":material/logout:"):
         st.logout()
-    #chat()
+        st.stop()
+
