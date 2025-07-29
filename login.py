@@ -2,7 +2,7 @@ import streamlit as st
 import authlib
 #from app import chat
 
-IMAGE_ADDRESS = "https://www.shutterstock.com/image-photo/demo-text-message-magnifying-glass-space-2491336635"
+IMAGE_ADDRESS = "https://www.shutterstock.com/image-vector/demo-blue-vector-draft-text-banner-2339597125"
 
 
 if 'lang' not in st.session_state:
