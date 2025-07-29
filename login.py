@@ -9,7 +9,7 @@ if 'lang' not in st.session_state:
     st.session_state.lang = "en"
 
 # Title and Image
-st.title("Demo_Google_Log")
+st.title("Demo_Google_Login")
 st.image(IMAGE_ADDRESS)
 
 # Login pipeline
